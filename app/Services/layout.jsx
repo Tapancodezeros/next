@@ -1,8 +1,8 @@
-export default function RootLayout ({ children }){
+export default function ServicesLayout ({ children }){
   return(
     <html>
       <body>
-        <p>Hello</p>
+        <p>Hello Services</p>
         {children}
       </body>
     </html>
