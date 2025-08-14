@@ -1,8 +1,10 @@
+import "../globals.css"
+import Navigation from "@/components/Navigation"
 export default function RootLayout ({ children }){
   return(
-    <html>
+    <html> 
       <body>
-        <p>Hello</p>
+        <Navigation />
         {children}
       </body>
     </html>
