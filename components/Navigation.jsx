@@ -5,7 +5,7 @@ export default function Navigation() {
     <header className="grid grid-cols-2">
       <div>next's first web</div>
       <nav>
-        <ul className="flex gap-4 font-bold ">
+        <ul className="flex gap-4 font-bold  ">
           <li className="underline bg-blue-400 rounded">
             <Link href="/">Home</Link>
           </li>
