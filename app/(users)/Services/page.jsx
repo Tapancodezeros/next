@@ -79,14 +79,12 @@ const Services = () => {
 
   return (
     <section className="font-roboto">
-    
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
           Our Team
         </h2>
 
         <div className="grid grid-cols-3 gap-8">
-    
           <motion.div
             variants={cardVariant}
             initial="hidden"
