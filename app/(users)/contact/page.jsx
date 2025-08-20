@@ -31,7 +31,7 @@ const About = () => {
     <div>
       <h1>Contact Us</h1>
       <form
-        className="flex flex-col max-w-md mx-auto my-30 gap-1.5"
+        className="flex flex-col max-w-md mx-auto my-30 gap-5"
         onSubmit={handleSubmit}
       >
         <input
@@ -41,6 +41,7 @@ const About = () => {
           className="border p-2 rounded mb-4"
           value={form.name}
           onChange={handleChange}
+          required
         />
         <input
           type="email"
@@ -49,6 +50,7 @@ const About = () => {
           className="border p-2 rounded mb-4"
           value={form.email}
           onChange={handleChange}
+          required
         />
         <textarea
           name="about"
@@ -56,13 +58,15 @@ const About = () => {
           className="border p-2 rounded mb-4"
           value={form.about}
           onChange={handleChange}
+          required
         ></textarea>
         <button type="submit" className="bg-blue-500 text-white p-2 rounded">
           Submit
         </button>
-        <button type="reset" className="bg-gray-500 text-white p-2 rounded ml-2">
+        <button type="reset" onClick={handlereset} className="bg-gray-500 text-white p-2 rounded ">
           Reset
         </button>
+
       </form>
     </div>
   );
