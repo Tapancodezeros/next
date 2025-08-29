@@ -8,12 +8,6 @@ const DataCard = async ({ userName }) => {
   const isMale = userData.gender === "male";
   const confidencePercentage = userData.probability * 100;
 
-  await new Promise((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, 500);
-  });
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full relative overflow-hidden">
@@ -45,7 +39,7 @@ const DataCard = async ({ userName }) => {
             <h1 className="text-3xl font-bold text-gray-800 mb-2 capitalize">
               {userData.name}
             </h1>
-            <h1 className="text-red-500"> {Math.random()} </h1>
+            <h1 className="text-red-500"> {Math.random().toFixed(2)} </h1>
             <div
               className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold ${
                 isMale

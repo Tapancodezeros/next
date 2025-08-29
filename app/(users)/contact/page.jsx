@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-
+import toast from 'react-hot-toast';
 const About = () => {
   const [form, setForm] = useState({
     name: "",
@@ -15,6 +15,7 @@ const About = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(form);
+    toast.success('data store successful!');
   };
 
   const handlereset = (e) => {
@@ -60,7 +61,7 @@ const About = () => {
           onChange={handleChange}
           required
         ></textarea>
-        <button type="submit" className="bg-blue-500 text-white p-2 rounded">
+        <button type="submit" onClick={handleSubmit} className="bg-blue-500 text-white p-2 rounded">
           Submit
         </button>
         <button type="reset" onClick={handlereset} className="bg-gray-500 text-white p-2 rounded ">

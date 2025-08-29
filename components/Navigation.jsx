@@ -8,7 +8,7 @@ export default function Navigation() {
   const isActive = (href) => pathname === href;
 
   return (
-    <header className="grid grid-cols-2 p-4 shadow-md gap-280">
+    <header className="grid grid-cols-2 p-4 shadow-md gap-220">
       <div className="font-bold text-xl">Next's First Web</div>
       <nav>
         <ul className="flex gap-4 font-bold">
@@ -31,7 +31,7 @@ export default function Navigation() {
             </Link>
           </li>
           <li className={isActive("/services") ? "underline text-blue-600" : "underline"}>
-            <Link href="/services" className={isActive("/services") ? "text-blue-600 underline" : "underline"}>
+            <Link href="/services"className={isActive("/services") ? "text-blue-600 underline" : "underline"}>
               Services
             </Link>
           </li>
@@ -40,8 +40,12 @@ export default function Navigation() {
               About
             </Link>
           </li>
+          <li>
+            <Link href={"/datafetch/servercomp?name=tapan"} className={isActive("/datafetch/servercomp?name=tapan") ? "text-blue-600 underline" : "underline"}>
+              DataFetch server
+            </Link></li>
         </ul>
       </nav>
     </header>
   );
-}
+} 
